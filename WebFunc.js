@@ -40,8 +40,8 @@ function yoga() {
         if (q2done == false) {
             popgoestheweasal();
             q2done = "done";
-            i = i+1;
             test();
+            i++;
         }   
         else {
             masterList.extend(q + i + yyes )
@@ -53,8 +53,8 @@ function yoga() {
         if (q2done == false) {
             popgoestheweasal();
             q2done = "done";
-            i = i+1;
             test();
+            i++;
         }
         else { 
             masterList.extend(q + (i+1) + yyes )
