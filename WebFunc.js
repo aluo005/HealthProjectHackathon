@@ -37,24 +37,24 @@ function popgoestheweasal() {
 function yoga() {
     console.log("yoga")
     if (type == "relaxed") {
+        test();
+        i++;
         if (q2done == false) {
             popgoestheweasal();
             q2done = "done";
-            test();
-            i++;
         }   
         else {
             masterList.extend(q + i + yyes )
             i = i+1;
                 
             } 
-        }  
+    }  
     if (type == "intense") {
+        test();
+        i++;
         if (q2done == false) {
             popgoestheweasal();
             q2done = "done";
-            test();
-            i++;
         }
         else { 
             masterList.extend(q + (i+1) + yyes )
