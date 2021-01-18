@@ -6,16 +6,15 @@ function getInputValue() {
     console.log("functionStart")
     inputVal = document.getElementById("group").value;
     console.log(inputVal);
-    if (inputVal == "yoga") {
+    if (inputVal == "yoga" || inputval == "Yoga") {
         console.log("yog");
-
     }
 
-    else if (inputVal == "cardio") {
+    else if (inputVal == "cardio" || inputVal == "Cardio") {
         console.log("card");
     }
     
-    else if (inputVal == "muscular") {
+    else if (inputVal == "muscular" || inputVal == "Muscular") {
         console.log("muscu")
     }
 
