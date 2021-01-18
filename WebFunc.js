@@ -58,7 +58,8 @@ function yoga() {
             popgoestheweasal();
             q2 = "done";
             i = i+1;
-        } 
+        }
+        else { 
             masterList.extend(q + (i+1) + yyes )
             i = i+1;
                 
