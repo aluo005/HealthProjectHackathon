@@ -32,10 +32,6 @@ function popgoestheweasal() {
     q2yyes.pop();
     q3yyes.pop();
     q4yyes.pop();
-
-
-
-
 } 
 
 function yoga() {
