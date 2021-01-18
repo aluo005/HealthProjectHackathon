@@ -84,6 +84,7 @@ function test() {
         temp.textContent = questionelaxed[i];    
     }
 }
+}
 
 
 
@@ -113,6 +114,7 @@ function getInputValue() {
             }
         }
     }
+}
 
     else if (inputVal == "intense") {
         console.log("card");
@@ -129,7 +131,8 @@ function getInputValue() {
                 temp.textContent = questionintense[i];  
             }
         }
-       }    
+        }
+    }  
 
 
     else {
@@ -139,5 +142,3 @@ function getInputValue() {
         setTimeout(function () {temp.textContent = "Question 1: What workout would you like to do: relaxed, or intense? (Note: Please answer with with only the type of excercise you wish to do, written exactly how it is here."}, 3000);
     }
     }
-    }
-}
