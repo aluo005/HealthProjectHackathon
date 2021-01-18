@@ -74,6 +74,7 @@ function yoga2() {
 
 
 function test() {
+    var temp = document.getElementById("question");
     if (q2done == "done") {
         for (i=0; i < questionelaxed.length;) {
         console.log("for");
