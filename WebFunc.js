@@ -43,7 +43,7 @@ function yoga() {
     if (type == "relaxed") {
         if (q2done == false) {
             popgoestheweasal();
-            q2 = "done";
+            q2done = "done";
             i = i+1;
             test();
         }   
@@ -56,7 +56,7 @@ function yoga() {
     if (type == "intense") {
         if (q2done == false) {
             popgoestheweasal();
-            q2 = "done";
+            q2done = "done";
             i = i+1;
             test();
         }
@@ -71,7 +71,7 @@ function yoga() {
 
 function yoga2() {
     i = i+1;
-    q2 = "done";
+    q2done = "done";
 
 }
 
