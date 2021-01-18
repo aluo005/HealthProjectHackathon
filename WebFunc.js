@@ -76,10 +76,8 @@ function yoga2() {
 function test() {
     var temp = document.getElementById("question");
     if (q2done == "done") {
-        for (i=0; i < questionelaxed.length;) {
         console.log("for");
         temp.textContent = questionelaxed[i];    
-    }
 }
 }
 
@@ -104,12 +102,6 @@ function getInputValue() {
         if (q2done == false) {
             temp.textContent = "Question 1.5: Would you like a hard workout?";    
             console.log("while");
-            if (q2done == "done") {
-                for (i=0; i < questionelaxed.length;) {
-                console.log("for");
-                temp.textContent = questionelaxed[i];    
-            }
-        }
     }
 }
 
@@ -123,11 +115,6 @@ function getInputValue() {
         document.getElementById('no').style.display='block';
         if (q2done == false) {
             temp.textContent = "Would you like a hard workout?";    
-            if (q2done == "done") {
-                for (i=0; i < questionintense.length;) {
-                temp.textContent = questionintense[i];  
-            }
-        }
         }
     }  
 
