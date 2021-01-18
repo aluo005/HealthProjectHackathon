@@ -36,7 +36,7 @@ function getInputValue() {
     {
         if(inputVal == "yes" || inputVal == "no")
         {
-            currentResponses = inputVal + currentQuestion;
+            currentResponses = inputVal + "-" + currentQuestion;
             currentQuestion = "calm";
             temp.textContent = "Would you like workouts that help you calm down?"; 
         } 
@@ -46,7 +46,7 @@ function getInputValue() {
     {
         if(inputVal == "yes" || inputVal == "no")
         {
-            currentResponses += inputVal + currentQuestion;
+            currentResponses += inputVal + "-" + currentQuestion;
             temp.textContent = currentResponses;
         } 
         else { displayError("Would you say you are somewhat flexible?") }
