@@ -17,8 +17,9 @@
 <body>
   <h1>Choose Your Workout</h1>
   <h3>Answer the following questions and you will be given a workout to do. For word questions, answer them with an exactly what the question asks, no more or no less. </h3>
-  <p id="question">Question 1: What workout would you like to do? Cardio, muscular, or yoga? (Note: Please answer with with only the type of excercise you wish to do, written exactly how it is here.) </p>
+  <p id="question">Question 1: What workout would you like to do: relaxed, or intense? (Note: Please answer with with only the type of excercise you wish to do, written exactly how it is here.) </p>
   <input type="text" id="group" value="" maxlength="100" />
-  <button type="button" onclick="getInputValue();">Submit</button>
- 
+  <button id="submit" type="button" onclick="getInputValue();">Submit</button>
+  <button id="yes" type="button" onclick="yoga();">Yes</buton>
+  <button id="no" type="button" onclick="yoga2();">No</button>
 </body>
