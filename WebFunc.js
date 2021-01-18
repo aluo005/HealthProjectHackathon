@@ -1,7 +1,5 @@
 var currentQuestion;
 var i = 0;
-document.getElementById('yes').style.display='none';
-document.getElementById('no').style.display='none';
 var q1yes = ["push ups", "elliptical machine", "walking", "stair-climbing",  "jumping jacks", "jump rope",  "treadmill",  "rowing machine", "stair climb"];
 var q2yes = ["sprints", "tabata", "kettlebell swings", "battle rope", "burpees", "squats", "burpees" ];
 var q3yes = ["running", "walking", "elliptical machine","push ups"];
@@ -41,11 +39,13 @@ function popgoestheweasal() {
 } 
 
 function yoga() {
+    console.log("yoga")
     if (type == "relaxed") {
         if (q2done == false) {
             popgoestheweasal();
             q2 = "done";
             i = i+1;
+            test();
         }   
         else {
             masterList.extend(q + i + yyes )
@@ -58,6 +58,7 @@ function yoga() {
             popgoestheweasal();
             q2 = "done";
             i = i+1;
+            test();
         }
         else { 
             masterList.extend(q + (i+1) + yyes )
@@ -76,7 +77,13 @@ function yoga2() {
 
 
 
-
+function test() {
+    if (q2done == "done") {
+        for (i=0; i < questionelaxed.length;) {
+        console.log("for");
+        temp.textContent = questionelaxed[i];    
+    }
+}
 
 
 
@@ -84,45 +91,53 @@ function yoga2() {
 
 function getInputValue() {
     console.log("functionStart");
+    var temp = document.getElementById("question");
     var inputVal = document.getElementById("group").value;
     console.log(inputVal);
 
     if (inputVal == "relaxed") {
         console.log("yog");
+        var temp = document.getElementById("question");
         type = "relaxed";
         document.getElementById('group').style.display='none'; 
         document.getElementById('submit').style.display='none';
         document.getElementById('yes').style.display='block';
         document.getElementById('no').style.display='block';
-        while (q2done == false) {
+        if (q2done == false) {
             temp.textContent = "Question 1.5: Would you like a hard workout?";    
-        } 
-        for (i=0; i < questionelaxed.length;) {
-            temp.textContent = questionelaxed[i];    
+            console.log("while");
+            if (q2done == "done") {
+                for (i=0; i < questionelaxed.length;) {
+                console.log("for");
+                temp.textContent = questionelaxed[i];    
+            }
         }
-
     }
 
     else if (inputVal == "intense") {
         console.log("card");
+        var temp = document.getElementById("question");
         type = "intense";
         document.getElementById('group').style.display='none';
         document.getElementById('submit').style.display='none'; 
         document.getElementById('yes').style.display='block';
         document.getElementById('no').style.display='block';
-        while (q2done == false) {
+        if (q2done == false) {
             temp.textContent = "Would you like a hard workout?";    
-        } 
-        for (i=0; i < questionintense.length;) {
-            temp.textContent = questionintense[i];  
+            if (q2done == "done") {
+                for (i=0; i < questionintense.length;) {
+                temp.textContent = questionintense[i];  
+            }
         }
-    }   
+       }    
 
 
     else {
         console.log("else");
         var temp = document.getElementById("question");
         temp.textContent = "ERROR: We were unable to figure out what you meant, make sure you follow the instructions about how to input your info.";
-        setTimeout(function () {temp.textContent = "Question 1: Would you like to do cardio, muscular, yoga? (Hint: Please answer with with only the type of excercise you wish to do, written exactly how it is here."}, 3000);
+        setTimeout(function () {temp.textContent = "Question 1: What workout would you like to do: relaxed, or intense? (Note: Please answer with with only the type of excercise you wish to do, written exactly how it is here."}, 3000);
+    }
+    }
     }
 }
